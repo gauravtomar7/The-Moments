@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Anime</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/css/bootstrap.min.css"
+      integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="/stylesheets/main.css">
+  </head>
+  <body style="background: #74ebd5;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #ACB6E5, #74ebd5);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #ACB6E5, #74ebd5); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  ">
+    <nav class="navbar navbar-default">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="/"><strong>ANIME (アニメ)</strong></a>
+        </div>
+        <div class="collapse navbar-collapse">
+          <ul class=" nav navbar-nav navbar-right">
+             
+           <% if(!currentUser){ %>
+              <li><a href="/login">Login</a></li>
+              <li><a href="/register">Sign Up</a></li>
+            <% } else { %>
+              <li><a href="#">Welcome <strong> <%=currentUser.username %></strong> </a></li>
+            <li><a href="/logout">Logout</a></li>
+            <% } %>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container">
+      <% if(error && error.length > 0){ %>
+        <div class="alert alert-danger" role="alert">
+        <%= error %>
+      </div>
+    <% } %>
+
+    <% if(success && success.length > 0){ %>
+        <div class="alert alert-success" role="alert">
+          <%= success %>
+        </div>
+    <% } %>
+    </div>
+        <!-- header partials end -->
+
+    <div class="container">
+      <header style="background-image: url('https://wallpaperaccess.com/full/5015244.jpg');" class="jumbotron">
+        <div class="container">
+          <h1>Whats Yours Favourite</h1>
+          <p> Add your Most favourite Moment in Anime </p>
+          <p>
+            <a class="btn btn-primary btn-large" href="/campgrounds/new"
+              >Lets Add</a
+            >
+          </p>
+        </div>
+      </header>
+
+      <div class="row text-center" style="display: flex; flex-wrap: wrap">
+        <% campgrounds.forEach(function(campgrounds){ %>
+        <div class="col-md-3 col-sm-6">
+          <div class="thumbnail">
+            <img src="<%= campgrounds.image %>" />
+          </div>
+          <h4> <strong> <big><%= campgrounds.name %> </big></strong><br><small><%= currentUser.username %></small> </h4>
+          <p>
+            <a href="/campgrounds/<%=campgrounds._id%>" class="btn btn-default">See More</a>
+          </p>
+        </div>
+       
+        <% }); %>
+      </div>
+    </div>
+
+      <!-- footer partials start -->
+  </body>
+</html>

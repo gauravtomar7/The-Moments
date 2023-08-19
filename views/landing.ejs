@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/css/bootstrap.min.css"
+      integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="/stylesheets/main.css">
+  </head>
+  <body style="background-image: url('https://wallpaperaccess.com/full/5015244.jpg');background-size: 100%; background-position: 0px -150px;animation: change; animation: change 10ms infinite ease-in-out ;">
+
+    <nav class="navbar navbar-default">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="/"><strong> ANIME (アニメ) </strong></a>
+        </div>
+        <div class="collapse navbar-collapse">
+          <ul class=" nav navbar-nav navbar-right">
+          
+            <% if(!currentUser){ %>
+              <li><a href="/login">Login</a></li>
+              <li><a href="/register">Sign Up</a></li>
+            <% } else { %>
+              <li><a href="#">Welcome <strong> <%=currentUser.username %></strong> </a></li>
+            <li><a href="/logout">Logout</a></li>
+            <% } %>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container">
+      <% if(error && error.length > 0){ %>
+        <div class="alert alert-danger" role="alert">
+        <%= error %>
+      </div>
+    <% } %>
+
+    <% if(success && success.length > 0){ %>
+        <div class="alert alert-success" role="alert">
+          <%= success %>
+        </div>
+    <% } %>
+    </div>
+
+    
+
+        <!-- header partials end -->
+
+
+
+    <h1 style="text-align:left;padding: -9%; margin: 3%; font-size: 90px; letter-spacing: 0.05em; font: 129.395px itc-bodoni-175,serif; font-style:italic; color:black";background-size:107.395px>The Moments</h1>
+    <h2 style="text-align: 10px 20px; line-height: -1;margin-top: -60px; margin-left: 690px; font: 14px Helvetica,Arial,sans-serif;">"The Times in it...."</h2>
+
+    <p style="text-align:left; margin-left: 200px;margin-bottom: 100px;margin-top: 60px; text-transform: uppercase;font-weight: 700; font-size: 35px; font-family:Arial, Helvetica, sans-serif" >
+      <a href="/campgrounds"
+      >Welcome  いらっしゃいませ</a
+    >
+  </p>
+
+  <p style="margin-left: 30px;margin-top: -30px; font-size: 20px;font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; margin-right: 30px;"> Anime (Japanese: アニメ, IPA: [aɲime] ) is hand-drawn and computer-generated animation <br> originating from Japan. Outside Japan and in English, anime refers specifically to animation <br> produced in Japan.[1] However, in Japan and in Japanese, anime (a term derived from a shortening <br>of the English word animation) describes all animated works, regardless of style or origin. Animation <br>produced outside Japan with similar style is referred as anime-influenced animation.
+    <br>
+    <br>
+    " <strong>The Moments"</strong> welcomes you, here you can add your favourite moments from the anime/movie <br>
+     which you thought THIS I WAS WAITING FOR!!
+    
+    </p>
+    
+ 
+
+
+    
+
+   <!-- footer partials start -->
+  </body>
+</html>
