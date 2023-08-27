@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>yelcamp</title>
+    <title>Anime</title>
    
     <link
     rel="stylesheet"
@@ -11,7 +11,8 @@
   />
   <link rel="stylesheet" href="/stylesheets/main.css">
   </head>
-  <body>
+  <body style="background-image: url('https://i.pinimg.com/originals/68/2b/13/682b1326d5d1b2c2e05ff2b63e22b3f6.jpg');background-size: 100%;animation: change ;">
+  
     <nav class="navbar navbar-default">
       <div class="container-fluid">
         <div class="navbar-header">
@@ -50,7 +51,7 @@
 
 <div class="container">
   <div class="row">
-      <h1 style="text-align: center ">EDIT<%=campground.name %></h1>
+      <h1 style="text-align: center ">EDIT " <strong><%=campground.name %></strong>"</h1>
       <div style="width:30%;margin:25px auto;">
           <form action="/campgrounds/<%=campground._id %>?_method=PUT" method="POST">
             <!-- action=post server-->
@@ -66,7 +67,7 @@
           <div class="form-group">
             <button class="btn btn-lg btn-primary btn-block">Submit!</button>
           </div>
-           <a href="/campgrounds">All</a>
+          
           </form>
       </div>
       
