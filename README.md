@@ -4,7 +4,7 @@ A fully responsive Website for Anime Lovers with user authentications where they
 HTML, CSS, Bootstrap, Javascript, Nodejs, Expressjs, MongoDB
 ## Project Setup
 ### First time setup
-git fork or clone this https://github.com/gauravtomar7/The-Moments
+Fork or clone this https://github.com/gauravtomar7/The-Moments
 ### Running the app locally 
 Following are the steps to run the backend of the community-website on your local.
 ### Installation
