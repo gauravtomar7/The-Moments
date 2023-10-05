@@ -9,7 +9,7 @@ Fork or clone this https://github.com/gauravtomar7/The-Moments
 Following are the steps to run the backend of the community-website on your local.
 ### Installation
 1. Install the dependencies: Install all the required packages and dependencies.
-   #### npm install
+#### npm install
 2. run node app.js
    The following link will open http://localhost:900/
 ## After making a change
