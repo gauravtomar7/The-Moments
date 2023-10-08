@@ -10,8 +10,9 @@ Following are the steps to run the backend of the community-website on your loca
 ### Installation
 1. Install the dependencies: Install all the required packages and dependencies.
 #### npm install
-2. run node app.js
-   The following link will open http://localhost:900/
+2.Go to app.js file.
+3. Run node app.js in your IDE
+   The following link will open http://localhost:900/ (the project local URL)
 ## After making a change
  Make a pull request with my main branch.
 ## Happy Contributing 
