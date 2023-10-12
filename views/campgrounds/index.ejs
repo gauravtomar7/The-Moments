@@ -37,8 +37,8 @@
     <div class="container">
       <% if(error && error.length > 0){ %>
         <div class="alert alert-danger" role="alert">
-        <%= error %>
-      </div>
+      <%= error %>
+    </div>
     <% } %>
 
     <% if(success && success.length > 0){ %>
@@ -52,11 +52,11 @@
     <div class="container">
       <header style="background-image: url('https://t4.ftcdn.net/jpg/02/91/26/03/360_F_291260326_eGA8x9SOdpioDBnbVjnIWeQMbBMqfRU9.jpg') ; background-repeat: no-repeat; background-size: cover;   " class="jumbotron" >
         <div class="container">
-          <h1>Whats Yours Favourite</h1>
-          <p> Add your Most favourite Moment in Anime </p>
+          <h1>Best Moments</h1>
+          <p> Add your Most favourite Moment/Character</p>
           <p>
             <a class="btn btn-primary btn-large" href="/campgrounds/new"
-              >Lets Add</a
+              >Add here</a
             >
           </p>
         </div>
@@ -68,17 +68,7 @@
           <div class="thumbnail">
             <img src="<%= campgrounds.image %>" />
           </div>
-      
 
-          <!-- <% if (currentUser && currentUser.username) { %>
-            <h4><strong><big><%= campgrounds.name %></big></strong><br><small><%= currentUser.username %></small></h4>
-          <% } else { %>
-            <h4><strong><big><%= campgrounds.name %></big></strong></h4>
-          <% } %> -->
-
-      
-
-          
           <p>
             <a href="/campgrounds/<%=campgrounds._id%>" class="btn btn-success">See More</a>
           </p>
