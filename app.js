@@ -41,7 +41,7 @@ app.use(express.static(__dirname + "/public"));
 app.use(methodOverride("_method"));
 
 
-app.get("/",function(req,res){                                // server 1
+app.get("/",function(req,res){                           //GET     // server 1
     
      res.render("landing");
 });
@@ -137,9 +137,10 @@ app.post("/campgrounds/:id/comments", isLoggedIn, function(req,res){           /
      });
 });
 
-app.get("/campgrounds/:comment_id/edit",function(req,res){                     //comments edit
-     res.send("jerfwn");
-});
+// app.get("/campgrounds/:comment_id/edit",function(req,res){                     //comments edit
+
+//      res.render("campgrounds/edit");
+// });
 
 app.get("/register", function(req,res){
      res.render("register");
@@ -187,7 +188,12 @@ app.get("/logout", function(req, res) {
      Campgrounds.findById(req.params.id)
      .then(function(foundCampgrounds){
           res.render("campgrounds/edit",{campground:foundCampgrounds});
+     })
+     .catch(function(err){
+          console.log(err);
+         res.redirect("/campgrounds");
      });  
+     
    })
      //is user logged in
      
