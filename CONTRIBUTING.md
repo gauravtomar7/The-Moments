@@ -5,5 +5,5 @@
 ## 4. After viewing, change the code as per your observation.
 ## 5. Make a PR with my main, again use VS Code inbuit, just by clicking you can ceate PR 
 ## 6. I will then merge it 
-#Thanks to all Contributors 
+# Thanks to all Contributors 
 ## Thanks a lot for spending your time helping Top_Secrets to grow. Thanks a lot! Keep rocking 🍻 Also Give it a Star 🌟, If you loved contributing to the project.
